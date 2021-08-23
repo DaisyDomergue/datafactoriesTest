@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://api.worldbank.org/v2/en/country/ETH?downloadformat=csv",
+			"url": "http://api.worldbank.org/v2/country/et/indicator/SP.POP.TOTL",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
