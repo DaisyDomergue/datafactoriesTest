@@ -1,0 +1,196 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "datafactoriesTestSimonAHailu"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.worldbank.org/v2/en/country/ETH?downloadformat=csv"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/CopyPipeline_ethiodata')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Copy_7ke",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [
+							{
+								"name": "Destination",
+								"value": "ethiodata//EthipianData"
+							}
+						],
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "HttpReadSettings",
+									"requestMethod": "GET"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings",
+									"skipLineCount": 0
+								}
+							},
+							"sink": {
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobStorageWriteSettings"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
+							},
+							"enableStaging": false,
+							"logSettings": {
+								"enableCopyActivityLog": true,
+								"copyActivityLogSettings": {
+									"logLevel": "Warning",
+									"enableReliableLogging": false
+								},
+								"logLocationSettings": {
+									"linkedServiceName": {
+										"referenceName": "AzureBlobStorage1",
+										"type": "LinkedServiceReference"
+									},
+									"path": "ethiodata"
+								}
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "SourceDataset_7ke",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "DestinationDataset_7ke",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/SourceDataset_7ke')]",
+				"[concat(variables('factoryId'), '/datasets/DestinationDataset_7ke')]",
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DestinationDataset_7ke')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureBlobStorage1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "EthipianData",
+						"container": "ethiodata"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SourceDataset_7ke')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "HttpServer1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "HttpServerLocation"
+					},
+					"columnDelimiter": ",",
+					"rowDelimiter": "\r",
+					"escapeChar": "\\",
+					"firstRowAsHeader": false,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/HttpServer1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage1_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/HttpServer1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "HttpServer",
+				"typeProperties": {
+					"url": "[parameters('HttpServer1_properties_typeProperties_url')]",
+					"enableServerCertificateValidation": true,
+					"authenticationType": "Anonymous"
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
