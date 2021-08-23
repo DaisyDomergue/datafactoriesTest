@@ -1,0 +1,9 @@
+{
+	"name": "datafactoriesTestSimonAHailu",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ad61a009-fd57-49e5-adb4-fefcd0aed0e1",
+		"tenantId": "0729a478-e6fd-445c-aea8-760a2257f5f9"
+	}
+}
