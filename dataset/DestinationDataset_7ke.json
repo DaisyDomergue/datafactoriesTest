@@ -11,8 +11,8 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": "output.csv",
-				"folderPath": "data",
-				"container": "cleaned"
+				"folderPath": "copyactivity-logs",
+				"container": "ethiodata"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
