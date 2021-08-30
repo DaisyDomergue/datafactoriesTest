@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "ethiodata"
+				"fileName": "output.csv",
+				"container": "cleaned"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
