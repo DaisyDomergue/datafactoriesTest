@@ -58,6 +58,7 @@
 									"path": "$['_id']['$oid']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 1
 								}
 							},
@@ -66,6 +67,7 @@
 									"path": "$['name']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 2
 								}
 							},
@@ -74,6 +76,7 @@
 									"path": "$['permalink']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 3
 								}
 							},
@@ -82,6 +85,7 @@
 									"path": "$['crunchbase_url']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 4
 								}
 							},
@@ -90,6 +94,7 @@
 									"path": "$['homepage_url']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 5
 								}
 							},
@@ -98,6 +103,7 @@
 									"path": "$['blog_url']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 6
 								}
 							},
@@ -106,6 +112,7 @@
 									"path": "$['blog_feed_url']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 7
 								}
 							},
@@ -114,6 +121,7 @@
 									"path": "$['twitter_username']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 8
 								}
 							},
@@ -122,6 +130,7 @@
 									"path": "$['category_code']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 9
 								}
 							},
@@ -130,6 +139,7 @@
 									"path": "$['number_of_employees']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 10
 								}
 							},
@@ -138,6 +148,7 @@
 									"path": "$['founded_year']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 11
 								}
 							},
@@ -146,6 +157,7 @@
 									"path": "$['founded_month']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 12
 								}
 							},
@@ -154,6 +166,7 @@
 									"path": "$['founded_day']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 13
 								}
 							},
@@ -162,6 +175,7 @@
 									"path": "$['deadpooled_year']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 14
 								}
 							},
@@ -170,6 +184,7 @@
 									"path": "$['tag_list']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 15
 								}
 							},
@@ -178,6 +193,7 @@
 									"path": "$['alias_list']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 16
 								}
 							},
@@ -186,6 +202,7 @@
 									"path": "$['email_address']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 17
 								}
 							},
@@ -194,6 +211,7 @@
 									"path": "$['phone_number']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 18
 								}
 							},
@@ -202,15 +220,8 @@
 									"path": "$['description']"
 								},
 								"sink": {
+									"type": "String",
 									"ordinal": 19
-								}
-							},
-							{
-								"source": {
-									"path": "$['updated_at']"
-								},
-								"sink": {
-									"ordinal": 20
 								}
 							},
 							{
@@ -218,7 +229,8 @@
 									"path": "$['overview']"
 								},
 								"sink": {
-									"ordinal": 21
+									"type": "String",
+									"ordinal": 20
 								}
 							},
 							{
@@ -226,7 +238,8 @@
 									"path": "$['total_money_raised']"
 								},
 								"sink": {
-									"ordinal": 22
+									"type": "String",
+									"ordinal": 21
 								}
 							},
 							{
@@ -234,7 +247,8 @@
 									"path": "$['deadpooled_month']"
 								},
 								"sink": {
-									"ordinal": 23
+									"type": "String",
+									"ordinal": 22
 								}
 							},
 							{
@@ -242,7 +256,8 @@
 									"path": "$['deadpooled_day']"
 								},
 								"sink": {
-									"ordinal": 24
+									"type": "String",
+									"ordinal": 23
 								}
 							},
 							{
@@ -250,11 +265,12 @@
 									"path": "$['deadpooled_url']"
 								},
 								"sink": {
-									"ordinal": 25
+									"type": "String",
+									"ordinal": 24
 								}
 							}
 						],
-						"collectionReference": "$['video_embeds']",
+						"collectionReference": "",
 						"mapComplexValuesToString": true
 					}
 				},
