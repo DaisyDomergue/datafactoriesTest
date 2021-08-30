@@ -10,9 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "output.csv",
-				"folderPath": "copyactivity-logs",
-				"container": "ethiodata"
+				"fileName": "companies.csv",
+				"container": "flesystem1"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
