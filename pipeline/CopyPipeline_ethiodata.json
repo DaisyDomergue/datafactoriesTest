@@ -21,21 +21,19 @@
 				],
 				"typeProperties": {
 					"source": {
-						"type": "DelimitedTextSource",
-						"storeSettings": {
-							"type": "AzureBlobStorageReadSettings",
-							"recursive": true,
-							"enablePartitionDiscovery": false
-						},
-						"formatSettings": {
-							"type": "DelimitedTextReadSettings",
-							"skipLineCount": 0
-						}
+						"type": "MongoDbAtlasSource",
+						"batchSize": 100
 					},
 					"sink": {
-						"type": "MongoDbAtlasSink",
-						"writeBatchTimeout": "00:30:00",
-						"writeBehavior": "insert"
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
 					},
 					"enableStaging": false,
 					"logSettings": {
@@ -55,13 +53,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_7ke",
+						"referenceName": "MongoDbAtlasCollection1",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "MongoDbAtlasCollection1",
+						"referenceName": "DestinationDataset_7ke",
 						"type": "DatasetReference"
 					}
 				]
