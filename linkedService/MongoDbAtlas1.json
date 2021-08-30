@@ -5,9 +5,9 @@
 		"annotations": [],
 		"type": "MongoDbAtlas",
 		"typeProperties": {
-			"connectionString": "mongodb+srv://root:@cluster0.r2tfz.mongodb.net/test",
-			"database": "test",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JJRVNURVNUU0lNT05BSEFJTFVfZmE5ZmM4YTAtMTljMS00MjIyLWJlYjAtMThjMDY4ZDA0ZGJiIg0KfQ=="
+			"connectionString": "mongodb+srv://toor:@cluster0.r2tfz.mongodb.net/myFirstDatabase?w=majority;retryWrites=true",
+			"database": "sample_training",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JJRVNURVNUU0lNT05BSEFJTFVfOTY4YTkwY2ItYzE3Yi00M2NlLTk0ZTAtMWRlMDA1NDk3NTFiIg0KfQ=="
 		}
 	}
 }
