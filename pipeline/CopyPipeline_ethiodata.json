@@ -207,7 +207,7 @@
 							},
 							{
 								"source": {
-									"path": "$['created_at']"
+									"path": "$['updated_at']"
 								},
 								"sink": {
 									"ordinal": 20
@@ -215,7 +215,7 @@
 							},
 							{
 								"source": {
-									"path": "$['updated_at']"
+									"path": "$['overview']"
 								},
 								"sink": {
 									"ordinal": 21
@@ -223,7 +223,7 @@
 							},
 							{
 								"source": {
-									"path": "$['overview']"
+									"path": "$['image']['available_sizes']"
 								},
 								"sink": {
 									"ordinal": 22
@@ -231,7 +231,7 @@
 							},
 							{
 								"source": {
-									"path": "$['total_money_raised']"
+									"path": "$['image']['attribution']"
 								},
 								"sink": {
 									"ordinal": 23
@@ -239,7 +239,7 @@
 							},
 							{
 								"source": {
-									"path": "$['deadpooled_month']"
+									"path": "$['products'][0]['name']"
 								},
 								"sink": {
 									"ordinal": 24
@@ -247,7 +247,7 @@
 							},
 							{
 								"source": {
-									"path": "$['deadpooled_day']"
+									"path": "$['products'][0]['permalink']"
 								},
 								"sink": {
 									"ordinal": 25
@@ -255,14 +255,582 @@
 							},
 							{
 								"source": {
-									"path": "$['deadpooled_url']"
+									"path": "$['relationships'][0]['is_past']"
 								},
 								"sink": {
 									"ordinal": 26
 								}
+							},
+							{
+								"source": {
+									"path": "$['relationships'][0]['title']"
+								},
+								"sink": {
+									"ordinal": 27
+								}
+							},
+							{
+								"source": {
+									"path": "$['relationships'][0]['person']['first_name']"
+								},
+								"sink": {
+									"ordinal": 28
+								}
+							},
+							{
+								"source": {
+									"path": "$['relationships'][0]['person']['last_name']"
+								},
+								"sink": {
+									"ordinal": 29
+								}
+							},
+							{
+								"source": {
+									"path": "$['relationships'][0]['person']['permalink']"
+								},
+								"sink": {
+									"ordinal": 30
+								}
+							},
+							{
+								"source": {
+									"path": "$['competitions'][0]['competitor']['name']"
+								},
+								"sink": {
+									"ordinal": 31
+								}
+							},
+							{
+								"source": {
+									"path": "$['competitions'][0]['competitor']['permalink']"
+								},
+								"sink": {
+									"ordinal": 32
+								}
+							},
+							{
+								"source": {
+									"path": "$['providerships']"
+								},
+								"sink": {
+									"ordinal": 33
+								}
+							},
+							{
+								"source": {
+									"path": "$['total_money_raised']"
+								},
+								"sink": {
+									"ordinal": 34
+								}
+							},
+							{
+								"source": {
+									"path": "$['funding_rounds'][0]['id']"
+								},
+								"sink": {
+									"ordinal": 35
+								}
+							},
+							{
+								"source": {
+									"path": "$['funding_rounds'][0]['round_code']"
+								},
+								"sink": {
+									"ordinal": 36
+								}
+							},
+							{
+								"source": {
+									"path": "$['funding_rounds'][0]['source_url']"
+								},
+								"sink": {
+									"ordinal": 37
+								}
+							},
+							{
+								"source": {
+									"path": "$['funding_rounds'][0]['source_description']"
+								},
+								"sink": {
+									"ordinal": 38
+								}
+							},
+							{
+								"source": {
+									"path": "$['funding_rounds'][0]['raised_amount']"
+								},
+								"sink": {
+									"ordinal": 39
+								}
+							},
+							{
+								"source": {
+									"path": "$['funding_rounds'][0]['raised_currency_code']"
+								},
+								"sink": {
+									"ordinal": 40
+								}
+							},
+							{
+								"source": {
+									"path": "$['funding_rounds'][0]['funded_year']"
+								},
+								"sink": {
+									"ordinal": 41
+								}
+							},
+							{
+								"source": {
+									"path": "$['funding_rounds'][0]['funded_month']"
+								},
+								"sink": {
+									"ordinal": 42
+								}
+							},
+							{
+								"source": {
+									"path": "$['funding_rounds'][0]['funded_day']"
+								},
+								"sink": {
+									"ordinal": 43
+								}
+							},
+							{
+								"source": {
+									"path": "$['funding_rounds'][0]['investments'][0]['company']"
+								},
+								"sink": {
+									"ordinal": 44
+								}
+							},
+							{
+								"source": {
+									"path": "$['funding_rounds'][0]['investments'][0]['financial_org']['name']"
+								},
+								"sink": {
+									"ordinal": 45
+								}
+							},
+							{
+								"source": {
+									"path": "$['funding_rounds'][0]['investments'][0]['financial_org']['permalink']"
+								},
+								"sink": {
+									"ordinal": 46
+								}
+							},
+							{
+								"source": {
+									"path": "$['funding_rounds'][0]['investments'][0]['person']"
+								},
+								"sink": {
+									"ordinal": 47
+								}
+							},
+							{
+								"source": {
+									"path": "$['investments']"
+								},
+								"sink": {
+									"ordinal": 48
+								}
+							},
+							{
+								"source": {
+									"path": "$['acquisition']['price_amount']"
+								},
+								"sink": {
+									"ordinal": 49
+								}
+							},
+							{
+								"source": {
+									"path": "$['acquisition']['price_currency_code']"
+								},
+								"sink": {
+									"ordinal": 50
+								}
+							},
+							{
+								"source": {
+									"path": "$['acquisition']['term_code']"
+								},
+								"sink": {
+									"ordinal": 51
+								}
+							},
+							{
+								"source": {
+									"path": "$['acquisition']['source_url']"
+								},
+								"sink": {
+									"ordinal": 52
+								}
+							},
+							{
+								"source": {
+									"path": "$['acquisition']['source_description']"
+								},
+								"sink": {
+									"ordinal": 53
+								}
+							},
+							{
+								"source": {
+									"path": "$['acquisition']['acquired_year']"
+								},
+								"sink": {
+									"ordinal": 54
+								}
+							},
+							{
+								"source": {
+									"path": "$['acquisition']['acquired_month']"
+								},
+								"sink": {
+									"ordinal": 55
+								}
+							},
+							{
+								"source": {
+									"path": "$['acquisition']['acquired_day']"
+								},
+								"sink": {
+									"ordinal": 56
+								}
+							},
+							{
+								"source": {
+									"path": "$['acquisition']['acquiring_company']['name']"
+								},
+								"sink": {
+									"ordinal": 57
+								}
+							},
+							{
+								"source": {
+									"path": "$['acquisition']['acquiring_company']['permalink']"
+								},
+								"sink": {
+									"ordinal": 58
+								}
+							},
+							{
+								"source": {
+									"path": "$['acquisitions']"
+								},
+								"sink": {
+									"ordinal": 59
+								}
+							},
+							{
+								"source": {
+									"path": "$['offices'][0]['description']"
+								},
+								"sink": {
+									"ordinal": 60
+								}
+							},
+							{
+								"source": {
+									"path": "$['offices'][0]['address1']"
+								},
+								"sink": {
+									"ordinal": 61
+								}
+							},
+							{
+								"source": {
+									"path": "$['offices'][0]['address2']"
+								},
+								"sink": {
+									"ordinal": 62
+								}
+							},
+							{
+								"source": {
+									"path": "$['offices'][0]['zip_code']"
+								},
+								"sink": {
+									"ordinal": 63
+								}
+							},
+							{
+								"source": {
+									"path": "$['offices'][0]['city']"
+								},
+								"sink": {
+									"ordinal": 64
+								}
+							},
+							{
+								"source": {
+									"path": "$['offices'][0]['state_code']"
+								},
+								"sink": {
+									"ordinal": 65
+								}
+							},
+							{
+								"source": {
+									"path": "$['offices'][0]['country_code']"
+								},
+								"sink": {
+									"ordinal": 66
+								}
+							},
+							{
+								"source": {
+									"path": "$['offices'][0]['latitude']"
+								},
+								"sink": {
+									"ordinal": 67
+								}
+							},
+							{
+								"source": {
+									"path": "$['offices'][0]['longitude']"
+								},
+								"sink": {
+									"ordinal": 68
+								}
+							},
+							{
+								"source": {
+									"path": "$['milestones'][0]['id']"
+								},
+								"sink": {
+									"ordinal": 69
+								}
+							},
+							{
+								"source": {
+									"path": "$['milestones'][0]['description']"
+								},
+								"sink": {
+									"ordinal": 70
+								}
+							},
+							{
+								"source": {
+									"path": "$['milestones'][0]['stoned_year']"
+								},
+								"sink": {
+									"ordinal": 71
+								}
+							},
+							{
+								"source": {
+									"path": "$['milestones'][0]['stoned_month']"
+								},
+								"sink": {
+									"ordinal": 72
+								}
+							},
+							{
+								"source": {
+									"path": "$['milestones'][0]['stoned_day']"
+								},
+								"sink": {
+									"ordinal": 73
+								}
+							},
+							{
+								"source": {
+									"path": "$['milestones'][0]['source_url']"
+								},
+								"sink": {
+									"ordinal": 74
+								}
+							},
+							{
+								"source": {
+									"path": "$['milestones'][0]['source_text']"
+								},
+								"sink": {
+									"ordinal": 75
+								}
+							},
+							{
+								"source": {
+									"path": "$['milestones'][0]['source_description']"
+								},
+								"sink": {
+									"ordinal": 76
+								}
+							},
+							{
+								"source": {
+									"path": "$['milestones'][0]['stoneable_type']"
+								},
+								"sink": {
+									"ordinal": 77
+								}
+							},
+							{
+								"source": {
+									"path": "$['milestones'][0]['stoned_value']"
+								},
+								"sink": {
+									"ordinal": 78
+								}
+							},
+							{
+								"source": {
+									"path": "$['milestones'][0]['stoned_value_type']"
+								},
+								"sink": {
+									"ordinal": 79
+								}
+							},
+							{
+								"source": {
+									"path": "$['milestones'][0]['stoned_acquirer']"
+								},
+								"sink": {
+									"ordinal": 80
+								}
+							},
+							{
+								"source": {
+									"path": "$['milestones'][0]['stoneable']['name']"
+								},
+								"sink": {
+									"ordinal": 81
+								}
+							},
+							{
+								"source": {
+									"path": "$['milestones'][0]['stoneable']['permalink']"
+								},
+								"sink": {
+									"ordinal": 82
+								}
+							},
+							{
+								"source": {
+									"path": "$['video_embeds']"
+								},
+								"sink": {
+									"ordinal": 83
+								}
+							},
+							{
+								"source": {
+									"path": "$['screenshots'][0]['available_sizes']"
+								},
+								"sink": {
+									"ordinal": 84
+								}
+							},
+							{
+								"source": {
+									"path": "$['screenshots'][0]['attribution']"
+								},
+								"sink": {
+									"ordinal": 85
+								}
+							},
+							{
+								"source": {
+									"path": "$['external_links'][0]['external_url']"
+								},
+								"sink": {
+									"ordinal": 86
+								}
+							},
+							{
+								"source": {
+									"path": "$['external_links'][0]['title']"
+								},
+								"sink": {
+									"ordinal": 87
+								}
+							},
+							{
+								"source": {
+									"path": "$['partners']"
+								},
+								"sink": {
+									"ordinal": 88
+								}
+							},
+							{
+								"source": {
+									"path": "$['deadpooled_month']"
+								},
+								"sink": {
+									"ordinal": 89
+								}
+							},
+							{
+								"source": {
+									"path": "$['deadpooled_day']"
+								},
+								"sink": {
+									"ordinal": 90
+								}
+							},
+							{
+								"source": {
+									"path": "$['deadpooled_url']"
+								},
+								"sink": {
+									"ordinal": 91
+								}
+							},
+							{
+								"source": {
+									"path": "$['ipo']['valuation_amount']"
+								},
+								"sink": {
+									"ordinal": 92
+								}
+							},
+							{
+								"source": {
+									"path": "$['ipo']['valuation_currency_code']"
+								},
+								"sink": {
+									"ordinal": 93
+								}
+							},
+							{
+								"source": {
+									"path": "$['ipo']['pub_year']"
+								},
+								"sink": {
+									"ordinal": 94
+								}
+							},
+							{
+								"source": {
+									"path": "$['ipo']['pub_month']"
+								},
+								"sink": {
+									"ordinal": 95
+								}
+							},
+							{
+								"source": {
+									"path": "$['ipo']['pub_day']"
+								},
+								"sink": {
+									"ordinal": 96
+								}
+							},
+							{
+								"source": {
+									"path": "$['ipo']['stock_symbol']"
+								},
+								"sink": {
+									"ordinal": 97
+								}
 							}
 						],
-						"collectionReference": "$['image']['available_sizes']",
+						"collectionReference": "",
 						"mapComplexValuesToString": true
 					}
 				},
