@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "DestinationDataset_7ke",
+						"referenceName": "DestinationDataset_7ke_copy1",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
