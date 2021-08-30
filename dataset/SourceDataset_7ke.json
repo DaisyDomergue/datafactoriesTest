@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "API_ETH_DS2_en_csv_v2_2714706.csv",
+				"fileName": "companies.csv",
 				"container": "flesystem1"
 			},
 			"columnDelimiter": ",",
