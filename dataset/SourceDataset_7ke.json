@@ -11,8 +11,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": "API_ETH_DS2_en_csv_v2_2714706.csv",
-				"folderPath": "copyactivity-logs",
-				"container": "ethiodata"
+				"container": "flesystem1"
 			},
 			"columnDelimiter": ",",
 			"rowDelimiter": "\r",
@@ -20,10 +19,6 @@
 			"firstRowAsHeader": false,
 			"quoteChar": "\""
 		},
-		"schema": [
-			{
-				"type": "String"
-			}
-		]
+		"schema": []
 	}
 }
